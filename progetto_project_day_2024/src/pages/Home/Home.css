@@ -1,7 +1,7 @@
 #home {
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: start;
 
   }
@@ -9,5 +9,30 @@
   body{
     background-image: url(IMMSFONDO2.png);
     background-position: 100%;
+  }
+
+  #robot{
+
+    margin-left: 50px;
+    margin-top: 50px;
+    float: left;
+    padding: 10px;
+    
+  }
+
+  #descrizione{
+
+    color: rgb(0, 0, 0);
+    padding: 280px;
+    margin-left: 900px;
+    background-image: url(IMM1_SFONDOAPP.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    font-family:inherit;
+    font-size: large;
+    font-weight: bolder;
+    font-variant: small-caps;
+
   }
 

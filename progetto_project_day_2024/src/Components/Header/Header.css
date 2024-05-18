@@ -1,9 +1,9 @@
 header#Header {
     background-image: url("HeaderImage.jpg");
-    box-shadow: 0 4px 8px 0 #ffffff33;  
+    box-shadow: 0 15px 10px 0 #474747fa;  
     padding: 10px 20px;
-    padding: 10px;
-    color: #ffffff;
+    color: rgb(17, 17, 80);
+    border-bottom:solid;   
 }
 
 /*
@@ -41,12 +41,14 @@ nav ul li a {
    #archimede{
     
     width: 50px;
+    margin-top: 8px;
 
 
 }
 #react{
     
     width: 80px;
+    margin-top: 8px;
 
 
 }
@@ -56,19 +58,20 @@ nav ul li a {
     border-top: groove;
     border-right: solid;
     border-bottom: solid;
+    color: #ffffff;
     
 
 
 }
 #archimede:hover{
     
-    width: 60px;
+    width: 55px;
 
 
 }
 #react:hover{
     
-    width: 100px;
+    width: 90px;
 
 
 }
