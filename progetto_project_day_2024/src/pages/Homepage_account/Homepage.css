@@ -1,0 +1,40 @@
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6415e9;
+    --bs-btn-border-color: #6415e9;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8238ff;
+    --bs-btn-hover-border-color: #8238ff;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-font-size: 18px;
+    --bs-btn-font-weight: 500;
+}
+
+div#Homepage-account {
+    display: flex;
+    justify-content: center;
+}
+
+.center-space {
+    width: 700px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-left: 3px solid lightgray;
+    border-right: 3px solid lightgray;
+    border-top: 3px solid lightgray;
+    border-bottom: 3px solid lightgray;
+
+}
+
+.field{
+    padding-top: 10px;
+}
+
+.save-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}

@@ -9,7 +9,8 @@ export const Homepage_account = () => {
   return (
     <div id='Homepage-account'>
       <div className='center-space'>
-        <div className='name-field-title'><h4>Nome</h4>
+        <div className='field'>
+          <h5>Nome</h5>
             <div className='name-field'>
               <form class="form-floating">
                 <input type="name" class="form-control" id="floatingInput" placeholder="Nome" ></input>
@@ -18,8 +19,8 @@ export const Homepage_account = () => {
             </div>
           </div>
 
-          <div className='surname-field-title'>
-            <h4>Cognome</h4>
+          <div className='field'>
+            <h5>Cognome</h5>
             <div className='surname-field'>
               <form class="form-floating">
                 <input type="name" class="form-control" id="floatingInput" placeholder="Cognome"></input>
@@ -28,47 +29,53 @@ export const Homepage_account = () => {
             </div>
           </div>
 
-          <div className='istitute-selection-title'>
-            <h4>Istituto</h4>
+          <div className='field'>
+            <h5>Istituto</h5>
             <div className='istitute-selection'>
-              <select class="form-select">
+              <select class="form-select" aria-label="select example">
                 <option selected>Seleziona la tua scuola</option>
                 {Istitutes.map(istitute => (
                   <Option_selction_istitute
-                    key={istitute.id}
                     istitute={istitute}
+                    key = {istitute.id}
                   />
                 ))}
               </select>
             </div>
           </div>
 
-          <div className='class-selection-title'>
+          <div className='field'>
             <h5>Classe</h5>
             <div className='class-selection'>
-            <select class="form-select">
-              <option selected>Seleziona la tua classe</option>
-              <option value="1">Prima</option>
-              <option value="2">Seconda</option>
-              <option value="3">Terza</option>
-              <option value="4">Quarta</option>
-              <option value="5">Quinta</option>
-            </select>
+              <select class="form-select" aria-label="select example">
+                <option selected>Seleziona la tua classe</option>
+                <option value="1">Prima</option>
+                <option value="2">Seconda</option>
+                <option value="3">Terza</option>
+                <option value="4">Quarta</option>
+                <option value="5">Quinta</option>
+              </select>
             </div>
           </div>
 
-          <div className='address-selection-title'>
+          <div className='field'>
             <h5>Indirizzo</h5>
             <div className='address-selection'>
-            <select class="form-select" >
-              <option selected>Seleziona il tuo indirizzo</option>
-              {Istitutes.map(istitute => (
-                  <Option_selction_address
-                    key={istitute.id}
-                    istitute={istitute}
-                  />
+              <select class="form-select" aria-label="select example" >
+                <option selected>Seleziona il tuo indirizzo</option>
+                {Istitutes.map(istitute => (
+                    <Option_selction_address
+                      key={istitute.id}
+                      istitute={istitute}
+                    />
                 ))}
-            </select>
+              </select>
+            </div>
+          </div>
+
+          <div className='save-button'>
+            <div>
+            <button type="button" class="btn btn-primary"> Salva </button>
             </div>
           </div>
       </div>

@@ -2,8 +2,10 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 
 export const Option_selction_istitute = (list_istitute) => {
+  const value = (list_istitute.id)
+  const nomeInstituto = (list_istitute.istituto)
   return (
-    <option value={list_istitute.id}>{list_istitute.istituto}</option>
+    <option value={value}>{nomeInstituto}</option>
   )
 }
 
