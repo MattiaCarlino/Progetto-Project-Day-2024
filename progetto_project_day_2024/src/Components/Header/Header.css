@@ -1,6 +1,8 @@
 header#Header {
-    background-color: #9556dd;
+    background-image: url("HeaderImage.jpg");
+    box-shadow: 0 4px 8px 0 #ffffff33;  
     padding: 10px 20px;
+    padding: 10px;
     color: #ffffff;
 }
 
@@ -14,4 +16,47 @@ ul {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+}
+
+nav ul {
+    list-style-type:none;
+  }
+
+nav ul li a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font:700;
+    
+   }
+   
+   nav ul li a:hover {
+    color: #ffffff !important;
+    font-weight:bold;
+    font-size: 20px;
+    text-decoration:underline;
+   }
+
+   #archimede{
+    
+    width: 50px;
+
+
+}
+#react{
+    
+    width: 80px;
+
+
+}
+#bordi{
+
+    border-left: solid;
+    border-top: groove;
+    border-right: solid;
+    border-bottom: solid;
+    
+
+
 }
