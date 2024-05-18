@@ -1,0 +1,90 @@
+[
+    {
+      "istituto": "Liceo classico",
+      "indirizzi": [
+        "Indirizzo Classico"
+      ]
+    },
+    {
+      "istituto": "Liceo scientifico",
+      "indirizzi": [
+        "Indirizzo Scientifico",
+        "Indirizzo Scientifico - Opzione Scienze Applicate",
+        "Indirizzo Scientifico - Sezione Sportiva"
+      ]
+    },
+    {
+      "istituto": "Liceo linguistico",
+      "indirizzi": [
+        "Indirizzo Linguistico"
+      ]
+    },
+    {
+      "istituto": "Liceo delle scienze umane",
+      "indirizzi": [
+        "Indirizzo Scienze Umane",
+        "Indirizzo Scienze Umane - Opzione Economico-Sociale"
+      ]
+    },
+    {
+      "istituto": "Liceo artistico",
+      "indirizzi": [
+        "Indirizzo Arti Figurative",
+        "Indirizzo Architettura e Ambiente",
+        "Indirizzo Audiovisivo e Multimediale",
+        "Indirizzo Design",
+        "Indirizzo Grafica",
+        "Indirizzo Scenografia"
+      ]
+    },
+    {
+      "istituto": "Liceo musicale e coreutico",
+      "indirizzi": [
+        "Indirizzo Musicale",
+        "Indirizzo Coreutico"
+      ]
+    },
+    {
+      "istituto": "Istituto tecnico economico",
+      "indirizzi": [
+        "Amministrazione, Finanza e Marketing",
+        "Sistemi Informativi Aziendali",
+        "Relazioni Internazionali per il Marketing",
+        "Turismo"
+      ]
+    },
+    {
+      "istituto": "Istituto tecnico tecnologico",
+      "indirizzi": [
+        "Meccanica, Meccatronica ed Energia",
+        "Trasporti e Logistica",
+        "Elettronica ed Elettrotecnica",
+        "Informatica e Telecomunicazioni",
+        "Grafica e Comunicazione",
+        "Chimica, Materiali e Biotecnologie",
+        "Sistema Moda",
+        "Agraria, Agroalimentare e Agroindustria",
+        "Costruzioni, Ambiente e Territorio"
+      ]
+    },
+    {
+      "istituto": "Istituto professionale per i servizi",
+      "indirizzi": [
+        "Servizi per l'Agricoltura, lo Sviluppo Rurale e la Selvicoltura",
+        "Servizi Socio-Sanitari",
+        "Servizi per l'Enogastronomia e l'Ospitalità Alberghiera",
+        "Servizi Commerciali",
+        "Servizi per la Sanità e l'Assistenza Sociale"
+      ]
+    },
+    {
+      "istituto": "Istituto professionale per l'industria e l'artigianato",
+      "indirizzi": [
+        "Manutenzione e Assistenza Tecnica",
+        "Industria e Artigianato per il Made in Italy",
+        "Arti Ausiliarie delle Professioni Sanitarie: Odontotecnico",
+        "Arti Ausiliarie delle Professioni Sanitarie: Ottico"
+      ]
+    }
+  ]
+  

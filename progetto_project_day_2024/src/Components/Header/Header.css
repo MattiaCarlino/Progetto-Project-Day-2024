@@ -1,0 +1,17 @@
+header#Header {
+    background-color: #9556dd;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+/*
+box-shadow: 0 6px 8px 0 #7b29f5;
+*/
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
