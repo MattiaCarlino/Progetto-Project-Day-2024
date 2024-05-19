@@ -1,9 +1,9 @@
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #6415e9;
+    --bs-btn-bg: #0a07e0;
     --bs-btn-border-color: #6415e9;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #8238ff;
+    --bs-btn-hover-bg: #17076e;
     --bs-btn-hover-border-color: #8238ff;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-font-size: 18px;
@@ -13,6 +13,7 @@
 div#Homepage-account {
     display: flex;
     justify-content: center;
+    padding-top: 80px;
 }
 
 .center-space {
@@ -37,4 +38,9 @@ div#Homepage-account {
     justify-content: center;
     align-items: center;
     padding-top: 25px;
+}
+
+h5{
+
+    color: #ffffff;
 }

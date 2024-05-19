@@ -1,15 +1,16 @@
 import React from 'react'
 import '../Home/Home.css'
 import { Link } from 'react-router-dom';
+import 'animate.css'
 
 export const Home = () => {
   return (
     <home id="home">
-      <div id='div'>
-        <img id="robot" src='https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg'
-        ></img>
+    <div id='div'>
+        <img id="robot" src='https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg'>
+        </img>
+        
       
-
         <p id="descrizione"> 
 
           Qua ci sarà la descrizione ? Qualcosa di simile che spieghi in breve il tutto,
@@ -29,3 +30,4 @@ export const Home = () => {
 }
 
 export default Home;
+
