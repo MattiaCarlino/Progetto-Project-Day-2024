@@ -1,10 +1,11 @@
 import React from 'react'
 import '../Home/Home.css'
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
     <home id="home">
-    <div id='div'>
+      <div id='div'>
         <img id="robot" src='https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg'
         ></img>
       
@@ -17,9 +18,11 @@ export const Home = () => {
 
         </p>
 
-    </div>
+      </div>
   
-     
+      <Link to='/Chat_bot' >
+        <button> Inizia a Chattare! </button>
+      </Link> 
     
     </home>
   )

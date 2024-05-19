@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "CHIAVEEEEEEE";
+const API_KEY = "CHIAVEEE";
 
 const AI = new GoogleGenerativeAI(API_KEY);
 
@@ -45,3 +45,5 @@ const fetchResponse = async (messageHistory) => {
   }
 
 }
+
+export default fetchResponse;
