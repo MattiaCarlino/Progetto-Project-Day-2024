@@ -3,7 +3,7 @@ header#Header {
     box-shadow: 0 15px 10px 0 #474747fa;  
     padding: 10px 20px;
     color: rgb(17, 17, 80);
-    border-bottom:solid;   
+    border-bottom:solid;  border-top: solid;
 }
 
 /*
@@ -32,9 +32,7 @@ nav ul li a {
    }
    
    nav ul li a:hover {
-    color: #ffffff !important;
-    font-weight:bold;
-    font-size: 20px;
+    color: #23cfcf !important;
     text-decoration:underline;
    }
 

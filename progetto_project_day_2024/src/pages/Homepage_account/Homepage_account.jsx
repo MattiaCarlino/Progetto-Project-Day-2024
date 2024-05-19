@@ -75,7 +75,7 @@ export const Homepage_account = () => {
 
           <div className='save-button'>
             <div>
-            <button type="button" class="btn btn-primary"> Salva </button>
+            <button type="button" class="btn btn-primary"> Sign Up </button>
             </div>
           </div>
       </div>
