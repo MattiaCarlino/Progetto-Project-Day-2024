@@ -20,18 +20,51 @@ export const Home = () => {
             <div id='image'>
               <img src='https://www.teknoring.com/wp-content/uploads/2019/03/intelligenza-artificiale.jpg'
               ></img>
+                <div id='descrizione'>
+
+                  <text id='titolo'> School ChatBOT ! </text>
+
+                  </div>
+                  
+                    <text id='spiegazione'>
+
+                      <br></br>
+                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+
+                  </text>
+
+                  
+                
+                <div id='posizioneBottone'>
+                
+                  <Link to='/Chat_bot' >
+                    <button id='bottone'>
+                       Inizia a Chattare </button>
+                  </Link> </div>
+                  
+                
+                
+                
+
             </div>
+
+
+            
                 </div>
 
-
-              <Link to='/Chat_bot' >
-                  <button id='bottone'> Inizia a Chattare! </button>
-                </Link> 
+                
+              
+              
                 
               
               </div>
 
-        
+            
+                
       
     
     </home>
