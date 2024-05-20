@@ -1,5 +1,6 @@
 import React from 'react'
 import '../Home/Home.css'
+import { Link } from 'react-router-dom';
 import 'animate.css'
 
 export const Home = () => {
@@ -19,9 +20,11 @@ export const Home = () => {
         </p>
         
 
-    </div>
+      </div>
   
-     
+      <Link to='/Chat_bot' >
+        <button> Inizia a Chattare! </button>
+      </Link> 
     
     </home>
   )
