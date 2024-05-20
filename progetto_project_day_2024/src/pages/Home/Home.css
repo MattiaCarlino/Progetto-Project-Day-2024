@@ -1,5 +1,4 @@
 
-
 #home {
     flex: 1;
     display: flex;
@@ -17,7 +16,6 @@
   #robot{
 
     background-image: url("https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg");
-    -webkit-filter: blur(3px);
     margin-left: 50px;
     margin-top: 50px;
     float: left;

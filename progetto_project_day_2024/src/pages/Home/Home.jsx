@@ -6,17 +6,18 @@ export const Home = () => {
   return (
     <home id="home">
     <div id='div'>
+     
         <img id="robot" src='https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg'>
         </img>
         
-      
-        <p id="descrizione"> 
+       <p id="descrizione" class="-mt-4 flex w-full flex-col pr-5 md:pr-8 lg:pr-10"> 
 
           Qua ci sarà la descrizione ? Qualcosa di simile che spieghi in breve il tutto,
           oppure altro che comunque servirà ad impatto!!! Importante, impatto. Qualcosa che 
           trasmetta subito e in breve cosa ci sarà e cosa farà ? Boh, ma impatto.
 
         </p>
+        
 
     </div>
   
