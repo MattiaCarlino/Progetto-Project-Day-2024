@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Side_bar from './Side_bar';
 import './Chat_bot.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,6 +21,13 @@ const Chat_bot = () => {
   const [currentChat, setCurrentChat] = useState(firstChat);
   const [chatList, setChatList] = useState([currentChat]);
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    setChatList(prevChatList => {
+      const newChatList = [currentChat, ...prevChatList.slice(1)];
+      return newChatList;
+    });
+  }, [currentChat]);
 
   const apiCall = async () => {
     //dovrebbe essere cosi:
@@ -51,6 +58,9 @@ const Chat_bot = () => {
         }
       ]
     }));
+    setChatList(prevChatList => {
+      return [currentChat, ...prevChatList.slice(1)];
+    });
     setMessage("");
     apiCall();
   }

@@ -23,6 +23,10 @@ const Side_bar = ({chatList, setChatList, currentChat, setCurrentChat}) => {
 
   const openChat = (selectedChat) => {
     setCurrentChat(selectedChat);
+    setChatList(prevChatList => {
+      const updatedChatList = prevChatList.filter(chat => chat.id !== selectedChat.id);
+      return [selectedChat, ...updatedChatList];
+    });
   };
 
   return (
