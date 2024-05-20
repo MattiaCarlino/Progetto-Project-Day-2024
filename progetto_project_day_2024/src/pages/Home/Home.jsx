@@ -6,25 +6,33 @@ import 'animate.css'
 export const Home = () => {
   return (
     <home id="home">
-    <div id='div'>
-     
-        <img id="robot" src='https://i.pinimg.com/originals/35/c5/0a/35c50a9f3b1d5dcefec93b7ccbb57f90.jpg'>
-        </img>
+    
+    <div id='scroll-container'>
+        <div id='scroll-content'>
+          <div id="image-with-text"> 
+
+            <img src='https://www.isarchimede.edu.it/wp-content/uploads/2023/10/archimeme.jpg'></img>
+            <div id="text-overlay">Gli studenti dell' <br></br>ITIS Archimede di Treviglio <br></br>presentano . . .</div>
+            
+            
+            </div>
+
+            <div id='image'>
+              <img src='https://www.teknoring.com/wp-content/uploads/2019/03/intelligenza-artificiale.jpg'
+              ></img>
+            </div>
+                </div>
+
+
+              <Link to='/Chat_bot' >
+                  <button id='bottone'> Inizia a Chattare! </button>
+                </Link> 
+                
+              
+              </div>
+
         
-       <p id="descrizione" class="-mt-4 flex w-full flex-col pr-5 md:pr-8 lg:pr-10"> 
-
-          Qua ci sarà la descrizione ? Qualcosa di simile che spieghi in breve il tutto,
-          oppure altro che comunque servirà ad impatto!!! Importante, impatto. Qualcosa che 
-          trasmetta subito e in breve cosa ci sarà e cosa farà ? Boh, ma impatto.
-
-        </p>
-        
-
-      </div>
-  
-      <Link to='/Chat_bot' >
-        <button> Inizia a Chattare! </button>
-      </Link> 
+      
     
     </home>
   )
