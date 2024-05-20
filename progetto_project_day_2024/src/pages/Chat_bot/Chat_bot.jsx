@@ -51,7 +51,15 @@ const Chat_bot = () => {
         }
       ]
     }));
+    setMessage("");
     apiCall();
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      sendMessage(message);
+    }
   }
 
   return (
@@ -97,10 +105,10 @@ const Chat_bot = () => {
           <div className="bottom-bar">
             <input className='text-field' type='text' placeholder='Scrivi qua il tuo messaggio...'
                 onChange={(e) => setMessage(e.target.value)}
-                value={message}
+                value={message} onKeyDown={handleKeyDown}
               />
             <button className='start-button' onClick={() => {sendMessage(message)}}>
-              <FontAwesomeIcon icon={faArrowUp} />
+              <FontAwesomeIcon icon={faArrowUp} className='arrow' />
             </button>
           </div>
         </div>
