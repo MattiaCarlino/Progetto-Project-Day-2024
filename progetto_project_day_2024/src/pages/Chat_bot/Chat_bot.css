@@ -1,6 +1,8 @@
 .main-chat-bot {
+    padding-right: 20vh;
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .chat-bot-stream {
@@ -9,6 +11,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    width: 80%;
 }
 
 .bottom-bar {
@@ -83,8 +86,10 @@ h2 {
 p {
     font-family: sans-serif;
     font-size: 13pt;
-    max-width: 1000px;
     color: white;
+    width: 900px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .prompt-options {
