@@ -21,21 +21,19 @@ const AI = new GoogleGenerativeAI(API_KEY);
 // ATTENZIONE: la proprietà role va valorizzata ad user per i messaggi dell'utente e
 // a model per le risposte del modello (ritornate dalla funzione)
 
-const fetchResponse = async (messageHistory) => {
+const fetchResponse = async (messageHistory, messageSent) => {
   
   try {
 
     const model = AI.getGenerativeModel({ model: "gemini-1.0-pro"});
 
     const chat = model.startChat({
-      history: messageHistory.slice(0, -1),
+      history: messageHistory,
       generationConfig: {maxOutputTokens: 2000},
       safetySettings: [] // TO DO: imposta limiti nei prompt(volgarità tipo palle)
     });
 
-    const lastMsg = messageHistory[messageHistory.length-1].parts[0].text;
-
-    const result = await chat.sendMessage(lastMsg);
+    const result = await chat.sendMessage(messageSent);
     const response = result.response;
 
     return response.text();

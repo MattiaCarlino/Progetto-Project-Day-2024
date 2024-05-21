@@ -29,12 +29,12 @@ const Chat_bot = () => {
     });
   }, [currentChat]);
 
-  const apiCall = async () => {
-    let historyToSend = currentChat.messageHistory.slice(1);
-    if(currentChat.messageHistory.length === 1) {
-      historyToSend = currentChat.messageHistory;
+  const apiCall = async (messageSent) => {
+    let historyToSend = [];
+    if(currentChat.messageHistory.length > 2) {
+      historyToSend = currentChat.messageHistory.slice(1, -1);
     }
-    const answer = await fetchResponse(historyToSend);
+    const answer = await fetchResponse(historyToSend, messageSent);
     setCurrentChat(prevChat => ({
       ...prevChat,
       messageHistory: [
@@ -62,7 +62,7 @@ const Chat_bot = () => {
       return [currentChat, ...prevChatList.slice(1)];
     });
     setMessage("");
-    apiCall();
+    apiCall(messageSent);
   }
 
   const handleKeyDown = (event) => {
