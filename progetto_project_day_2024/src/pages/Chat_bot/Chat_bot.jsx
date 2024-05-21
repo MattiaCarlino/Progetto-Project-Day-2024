@@ -3,7 +3,7 @@ import Side_bar from './Side_bar';
 import './Chat_bot.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-//import fetchResponse from '../../api/api';
+import fetchResponse from '../../api/api';
 
 const Chat_bot = () => {
 
@@ -30,11 +30,11 @@ const Chat_bot = () => {
   }, [currentChat]);
 
   const apiCall = async () => {
-    //dovrebbe essere cosi:
-    //let answer = await fetchResponse(currentChat.messageHistory);
-    //ma la chiamata api è rotta per ora :(
-    //quindi per ora risponde sempre "ok"
-    let answer = "ok";
+    let historyToSend = currentChat.messageHistory.slice(1);
+    if(currentChat.messageHistory.length === 1) {
+      historyToSend = currentChat.messageHistory;
+    }
+    const answer = await fetchResponse(historyToSend);
     setCurrentChat(prevChat => ({
       ...prevChat,
       messageHistory: [

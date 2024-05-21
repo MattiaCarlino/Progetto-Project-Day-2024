@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "CHIAVEEE";
+const API_KEY = "AIzaSyCGPW64MYc8P2bzp7_G7WtiE-bdmYjxCsM";
 
 const AI = new GoogleGenerativeAI(API_KEY);
 
@@ -36,7 +36,7 @@ const fetchResponse = async (messageHistory) => {
     const lastMsg = messageHistory[messageHistory.length-1].parts[0].text;
 
     const result = await chat.sendMessage(lastMsg);
-    const response = await result.response;
+    const response = result.response;
 
     return response.text();
     
