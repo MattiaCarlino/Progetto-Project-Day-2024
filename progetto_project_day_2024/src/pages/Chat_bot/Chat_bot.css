@@ -8,6 +8,9 @@
 .chat-bot-stream {
     height: 100vh;
     padding: 2vh 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     justify-content: space-between;
     position: relative;
     z-index: 10;
@@ -25,6 +28,7 @@
     z-index: 10;
     position: absolute;
     bottom: 0;
+    padding-top: 140px;
 }
 
 .text-field {
@@ -61,12 +65,13 @@ input {
 }
 
 .messages {
-    height: 70%;
+    height: 90vh;
     width: 100vh;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .msg div {
@@ -96,7 +101,7 @@ p {
     margin: auto;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     color: white;
