@@ -29,11 +29,11 @@ export const Home = () => {
                     <text id='spiegazione'>
 
                       <br></br>
-                      School ChatBOT ti aiuta bla bla bla bla <br></br>
-                      School ChatBOT ti aiuta bla bla bla bla <br></br>
-                      School ChatBOT ti aiuta bla bla bla bla <br></br>
-                      School ChatBOT ti aiuta bla bla bla bla <br></br>
-                      School ChatBOT ti aiuta bla bla bla bla <br></br>
+                      School ChatBOT risponde a qualsiasi tuo dubbio, domanda e perplessità. <br></br>
+                      Può organizzare il tuo studio, collegare 2 o più materie in base all'argomento, <br></br>
+                      insomma, aiutarti fornendoti ciò di cui hai bisogno. <br></br>
+                      <br></br>
+                      Premi il tasto e guarda con i tuoi occhi <br></br>
 
                   </text>
 
@@ -43,7 +43,7 @@ export const Home = () => {
                 
                   <Link to='/Chat_bot' >
                     <button id='bottone'>
-                       Inizia a Chattare </button>
+                       Start Chatting </button>
                   </Link> </div>
                   
                 
