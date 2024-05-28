@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Side_bar from './Side_bar';
+import Side_bar from './Side_bar/Side_bar';
 import './Chat_bot.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -94,7 +94,7 @@ const Chat_bot = () => {
             currentChat.messageHistory.length === 1 ?
               <div className='prompt-options'>
                 <div className="suggestion">
-                  <h2>Consigliato A</h2>
+                  <h2> Consigliato A </h2>
                   <p>dettagli sul prompt...</p>
                 </div>
                 <div className="suggestion">
