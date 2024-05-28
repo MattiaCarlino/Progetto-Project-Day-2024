@@ -61,6 +61,7 @@ input {
 }
 
 .messages {
+    top: 2vh;
     height: 70%;
     width: 145vh;
     display: flex;
@@ -95,7 +96,8 @@ p {
 }
 
 .prompt-options {
-    margin: auto;
+    top: 10vh;
+    left: 4.7vw;
     padding: 10px;
     display: flex;
     flex-direction: column;

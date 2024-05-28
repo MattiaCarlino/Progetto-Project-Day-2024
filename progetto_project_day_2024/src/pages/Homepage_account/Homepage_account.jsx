@@ -5,22 +5,35 @@ import { useState } from 'react';
 import Istitutes from '../../istitute.json'
 
 export const Homepage_account = () => {
+
+  const [nome, setNome] = useState('');
+  const [cognome, setCognome] = useState('');
+
+  const saveData = () => {
+    localStorage.setItem('nome', nome);
+    localStorage.setItem('cognome', cognome);
+    const elementIstituto = document.getElementById('istituto');
+    const istituto = elementIstituto.options[elementIstituto.selectedIndex].value;
+    localStorage.setItem('istituto', istituto);
+    // faccio dopo anche classe
+  }
+
   return (
     <div id='Homepage-account'>
       <div className='center-space'>
         <div className='field'>
           <form >
             <div className='field' class="form-floating mb-3">
-              <input type='text' class="form-control" id="floatingInput" placeholder='Nome'></input>
+              <input type='text' class="form-control" id="floatingInput" placeholder='Nome' onChange={(e)=>setNome(e.target.value)}></input>
               <label for="floatingInput"> Inserisci Nome </label>
             </div>
             <div className='field' class="form-floating mb-3">
-              <input type='text' class="form-control" id="floatingInput" placeholder='Cognome'></input>
+              <input type='text' class="form-control" id="floatingInput" placeholder='Cognome' onChange={(e)=>setCognome(e.target.value)}></input>
               <label for="floatingInput"> Inserisci Cognome </label>
             </div>
             <div className='field'>
               <label>Scuola</label>
-              <select class="form-select" name='istitute-field'>
+              <select class="form-select" name='istitute-field' id='istituto'>
                   <option value='null' selected>Seleziona la tua scuola</option>
                   <hr />
                   <option value="liceo classico">Liceo Classico</option>
@@ -100,7 +113,7 @@ export const Homepage_account = () => {
             </div>
               <div className='save-button'>
                 <div>
-                  <button type="button" class="btn btn-primary"> Sign Up </button>
+                  <button type="button" class="btn btn-primary" onClick={saveData}> Sign Up </button>
                 </div>
             </div>
           </form>
