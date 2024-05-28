@@ -107,7 +107,7 @@ export const Homepage_account = () => {
                 </select>
             </div>
             <div className='field'>
-              <label>Scuola</label>
+              <h5>Classe</h5>
               <select class="form-select" id='classe'>
                 <option selected>Seleziona la tua classe</option>
                 <option value="1">Prima</option>
