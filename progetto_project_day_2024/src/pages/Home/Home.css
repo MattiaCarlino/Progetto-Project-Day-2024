@@ -76,7 +76,6 @@
   justify-content: left;
   width: 47%; /* Stessa larghezza delle immagini */
   height: 70%;
-  border: 20px solid #ffff;
   margin-top: 70px;
   margin-left: 50px;
   object-fit: cover;

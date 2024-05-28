@@ -55,6 +55,8 @@
 }
 
 .footer-info p {
-    justify-content: end;
+    justify-content:space-between;
     margin: 5px 0;
+    margin-left: 100px;
+
 }
