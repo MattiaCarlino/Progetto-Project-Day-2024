@@ -2,7 +2,6 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../Homepage_account/Homepage.css'
 import { useState } from 'react';
-import Istitutes from '../../istitute.json'
 
 export const Homepage_account = () => {
 
@@ -21,18 +20,20 @@ export const Homepage_account = () => {
   return (
     <div id='Homepage-account'>
       <div className='center-space'>
-        <div className='field'>
+        <div>
           <form >
+            <div className='title-field'><h5> Nome </h5></div>
             <div className='field' class="form-floating mb-3">
               <input type='text' class="form-control" id="floatingInput" placeholder='Nome' onChange={(e)=>setNome(e.target.value)}></input>
               <label for="floatingInput"> Inserisci Nome </label>
             </div>
+            <div className='title-field'><h5> Cognome </h5></div>
             <div className='field' class="form-floating mb-3">
               <input type='text' class="form-control" id="floatingInput" placeholder='Cognome' onChange={(e)=>setCognome(e.target.value)}></input>
               <label for="floatingInput"> Inserisci Cognome </label>
             </div>
             <div className='field'>
-              <label>Scuola</label>
+              <h5> Scuola </h5>
               <select class="form-select" name='istitute-field' id='istituto'>
                   <option value='null' selected>Seleziona la tua scuola</option>
                   <hr />
@@ -101,7 +102,7 @@ export const Homepage_account = () => {
                 </select>
             </div>
             <div className='field'>
-              <label>Scuola</label>
+              <h5> Classe </h5>
               <select class="form-select">
                 <option selected>Seleziona la tua classe</option>
                 <option value="1">Prima</option>
@@ -124,95 +125,3 @@ export const Homepage_account = () => {
 }
 
 export default Homepage_account;
-
-/*
- <h5>Nome</h5>
-            <div className='name-field'>
-              <form class="form-floating">
-                <input type="name" class="form-control" id="floatingInput" placeholder="Nome" ></input>
-                <label for="floatingInput"> Inserisci nome </label>
-              </form>
-            </div>
-          </div>
-
-          <div className='field'>
-            <h5>Cognome</h5>
-            <div className='surname-field'>
-              <form class="form-floating">
-                <input type="name" class="form-control" id="floatingInput" placeholder="Cognome"></input>
-                <label for="floatingInput"> Inserisci cognome </label>
-              </form>
-            </div>
-          </div>
-
-          <div className='field'>
-            <h5>Istituto</h5>
-            <div className='istitute-selection'>
-              <select class="form-select" aria-label="select example">
-                <option selected>Seleziona la tua scuola</option>
-                {Istitutes.map(istitute => (
-                  <Option_selction_istitute
-                    list_istitute={istitute}
-                    key = {istitute.id}
-                  />
-                ))}
-              </select>
-            </div>
-          </div>
-
-          <div className='field'>
-            <h5>Classe</h5>
-            <div className='class-selection'>
-              <select class="form-select" aria-label="select example">
-                <option selected>Seleziona la tua classe</option>
-                <option value="1">Prima</option>
-                <option value="2">Seconda</option>
-                <option value="3">Terza</option>
-                <option value="4">Quarta</option>
-                <option value="5">Quinta</option>
-              </select>
-            </div>
-          </div>
-
-          <div className='field'>
-            <h5>Indirizzo</h5>
-            <div className='address-selection'>
-              <select class="form-select" aria-label="select example" >
-                <option selected>Seleziona il tuo indirizzo</option>
-                {Istitutes.map(istitute => (
-                    <Option_selction_address
-                      key={istitute.id}
-                      istitute={istitute}
-                    />
-                ))}
-              </select>
-            </div>
-          </div>
-
-          <div className='save-button'>
-            <div>
-            <button type="button" class="btn btn-primary"> Sign Up </button>
-            </div>
-          </div>
-*/
-
-/*
-<form >
-            <div className='name-field'>
-              <label> Inserisci Nome </label>
-              <input type='text' class= "form-control" placeholder='Nome'></input>
-            </div>
-            <div className='surname-field'>
-              <label> Inserisci Cognome </label>
-              <input type='text' class= "form-control" placeholder='Cognome'></input>
-            </div>
-            <div className='istitute-field'>
-              <label>Scuola</label>
-              <select class="form-select" name='istitute-field'>
-                <option selected >Seleziona la tua scuola</option>  
-                <option></option>
-              </select>
-
-            </div>
-
-*/

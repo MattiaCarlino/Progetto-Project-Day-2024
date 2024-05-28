@@ -100,16 +100,15 @@ p {
     left: 4.7vw;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
     color: white;
     font-size: 25px;
     height: 70%;
     position: relative;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 80%;
     gap: 20px;
+    align-items: center;
 }
 
 .suggestion {

@@ -31,14 +31,14 @@ div#Homepage-account {
 }
 
 .field{
-    padding-top: 15px;
+    padding-top: 20px;
 }
 
 .save-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 35px;
 }
 
 h5{
@@ -47,5 +47,5 @@ h5{
 }
 
 label{
-    color: white
+    color: black
 }

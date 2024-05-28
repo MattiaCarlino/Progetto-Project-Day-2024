@@ -4,8 +4,26 @@ import './Chat_bot.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import fetchResponse from '../../api/api';
+import list_prompt from '../../list_prompt.json'
+import 'bootstrap'
 
 const Chat_bot = () => {
+
+  const selectPrompt = (id) =>{
+    var prompt
+
+    if (localStorage.getItem('nome') != '' && localStorage.getItem('cognome') != '' && localStorage.getItem('istituto') != 'null' && localStorage.getItem('classe') != 'null' ){
+      if(id == 1){
+        prompt = list_prompt[0].prompt
+        prompt.replace('istituto', 'nero')
+      }else if(id == 2){
+        prompt = list_prompt[1].prompt
+      }else if(id ==3){
+        prompt = list_prompt[2].prompt
+      }
+      sendMessage(prompt)
+    }
+  }
 
   const firstChat = {
     id: 1,
@@ -93,21 +111,20 @@ const Chat_bot = () => {
           {
             currentChat.messageHistory.length === 1 ?
               <div className='prompt-options'>
-                <div className="suggestion">
-                  <h2> Consigliato A </h2>
-                  <p>dettagli sul prompt...</p>
+                <div className="suggestion" >
+                  <h2> Organizzami lo studio </h2>
+                  <p>organizza un piano di studi in base alle tue materie</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(1)}}> Use </button>
                 </div>
                 <div className="suggestion">
-                  <h2>Consigliato B</h2>
-                  <p>dettagli sul prompt...</p>
+                  <h2> Opzioni orientamento </h2>
+                  <p>propone una serie di opzioni d'orientamento in uscita</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(2)}}> Use </button>
                 </div>
                 <div className="suggestion">
-                  <h2>Consigliato C</h2>
-                  <p>Devo aggiungere</p>
-                </div>
-                <div className="suggestion">
-                  <h2>Consigliato D</h2>
-                  <p>questa funzione..</p>
+                  <h2> Collegamenti argomento </h2>
+                  <p> parte da un argomentoe collega diverse materie</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(3)}}> Use </button>
                 </div>
               </div>
             : null
