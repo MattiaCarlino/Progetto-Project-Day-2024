@@ -31,7 +31,7 @@ div#Homepage-account {
 }
 
 .field{
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .save-button {
@@ -44,4 +44,8 @@ div#Homepage-account {
 h5{
 
     color: #ffffff;
+}
+
+label{
+    color: white
 }
