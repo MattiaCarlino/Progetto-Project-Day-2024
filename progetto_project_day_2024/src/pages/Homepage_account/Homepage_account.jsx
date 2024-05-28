@@ -12,10 +12,15 @@ export const Homepage_account = () => {
   const saveData = () => {
     localStorage.setItem('nome', nome);
     localStorage.setItem('cognome', cognome);
+
     const elementIstituto = document.getElementById('istituto');
     const istituto = elementIstituto.options[elementIstituto.selectedIndex].value;
     localStorage.setItem('istituto', istituto);
-    // faccio dopo anche classe
+
+    const elementClasse = document.getElementById('classe');
+    const classe = elementClasse.options[elementClasse.selectedIndex].value;
+    localStorage.setItem('classe', classe);
+    //manca l'input validation che farò
   }
 
   return (
@@ -102,7 +107,7 @@ export const Homepage_account = () => {
             </div>
             <div className='field'>
               <label>Scuola</label>
-              <select class="form-select">
+              <select class="form-select" id='classe'>
                 <option selected>Seleziona la tua classe</option>
                 <option value="1">Prima</option>
                 <option value="2">Seconda</option>
