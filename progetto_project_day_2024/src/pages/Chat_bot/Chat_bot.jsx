@@ -113,18 +113,18 @@ const Chat_bot = () => {
               <div className='prompt-options'>
                 <div className="suggestion" >
                   <h2> Organizzami lo studio </h2>
-                  <p>organizza un piano di studi in base alle tue materie</p>
-                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(1)}}> Use </button>
+                  <p>Organizza un piano di studi in base alle tue materie</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(1)}}> Chiedi </button>
                 </div>
                 <div className="suggestion">
                   <h2> Opzioni orientamento </h2>
-                  <p>propone una serie di opzioni d'orientamento in uscita</p>
-                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(2)}}> Use </button>
+                  <p>Propone una serie di opzioni d'orientamento in uscita</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(2)}}> Chiedi </button>
                 </div>
                 <div className="suggestion">
                   <h2> Collegamenti argomento </h2>
-                  <p> parte da un argomentoe collega diverse materie</p>
-                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(3)}}> Use </button>
+                  <p> Parte da un argomentoe collega diverse materie</p>
+                  <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(3)}}> Chiedi </button>
                 </div>
               </div>
             : null

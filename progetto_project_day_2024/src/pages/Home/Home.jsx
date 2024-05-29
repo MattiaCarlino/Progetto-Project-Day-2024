@@ -43,7 +43,8 @@ export const Home = () => {
                 
                   <Link to='/Chat_bot' >
                     <button id='bottone'>
-                       Start Chatting </button>
+                      Inizia a chattare!
+                    </button>
                   </Link> </div>
                   
                 
