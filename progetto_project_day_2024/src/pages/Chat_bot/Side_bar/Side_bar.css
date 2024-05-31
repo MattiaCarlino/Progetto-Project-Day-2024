@@ -1,6 +1,6 @@
 .side-bar {
     padding-top: 2vh;
-    background-color: #202124;
+    background-color: #588d9c;
     height: 100vh;
     width: 35vh;
 }
@@ -20,17 +20,18 @@
     width: 100%;
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: #588d9c;
+    color: #f1d18a;
+    border: solid #f1d18a;
+    border-radius: 10px;
     text-align: left;
     cursor: pointer;
     font-size: 16px;
 }
 
 .chat-button:hover {
-    background-color: #0056b3;
+    background-color: #36626a;
+    color: #cfa458;
 }
 
 .icon-container {
@@ -41,6 +42,11 @@
 
 .user-icon {
     font-size: 50px;
+    color: #f1d18a;
+}
+
+.user-icon:hover {
+    color: #cfa458;
 }
 
 .chat-list {
