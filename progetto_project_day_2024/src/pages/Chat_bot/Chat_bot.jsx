@@ -6,6 +6,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import fetchResponse from '../../api/api';
 import list_prompt from '../../list_prompt.json'
 import 'bootstrap'
+import { Link } from 'react-router-dom';
 
 const Chat_bot = () => {
 
@@ -140,7 +141,10 @@ const Chat_bot = () => {
                 null :
                 <div className='alert-login'>
                   <div class="alert alert-danger" role="alert">
-                  A simple danger alert—check it out!
+                    <h5 className='titolo-alert'> Alert, devi prima inserire i dati dell'account per usare le funzionalità</h5>
+                    <Link to="/Homepage Account">
+                      <button type="button" class="btn btn-danger">Danger</button>
+                    </Link>
                   </div>
                 </div> 
               }

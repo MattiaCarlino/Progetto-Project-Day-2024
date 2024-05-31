@@ -1,18 +1,21 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css'
 import '../Homepage_account/Homepage.css'
-import { useState } from 'react';
+import { useState } from 'react'
 
 export const Homepage_account = () => {
-
-  const [nome, setNome] = useState('');
-  const [cognome, setCognome] = useState('');
+  
   const [error, setError] = useState("form-control")
   const [errorCognome, setErrorCognome] = useState("form-control")
   const [errorIstituto, setErrorIstituto] = useState("form-select")
   const [errorClasse, setErrorClasse] = useState("form-select")
+
+  const [nome, setNome] = useState('');
+  const [cognome, setCognome] = useState('');
+
   const [isVerified, setIsVierified] = useState(false)
   const [errorInput, setErrorInput] = useState(false)
+
 
   const saveData = (istituto, classe) => {
     localStorage.setItem('nome', nome);
@@ -26,6 +29,16 @@ export const Homepage_account = () => {
     const istituto = elementIstituto.options[elementIstituto.selectedIndex].value;
     const elementClasse = document.getElementById('classe');
     const classe = elementClasse.options[elementClasse.selectedIndex].value;
+
+    const regex = /^[A-Za-z]*$/;
+
+    /*
+
+    if(nome != '' || cognome != '' || istituto != 'null' || classe != 'null'){
+      if(regex.test(nome))
+
+    }
+    */
 
     if(nome == '' || nome == undefined){
       setError("form-control is-invalid")
@@ -43,7 +56,7 @@ export const Homepage_account = () => {
       setErrorIstituto("form-select")
     }
     if(classe == 'null'){
-      setErrorClasse("form-select is-invalid")
+      setErrorClasse("form-select is-invalid")  
     }else{
       setErrorClasse("form-select")
     }
@@ -53,8 +66,6 @@ export const Homepage_account = () => {
       setIsVierified(true)
     }else{
       setErrorInput(true)
-      setNome('')
-      setCognome('')
     }
   }
 
@@ -75,7 +86,7 @@ export const Homepage_account = () => {
         <form >
           <div className='title-field'><h5> Nome </h5></div>
             <div className='field' class="form-floating mb-3">
-              <input type='text' class={error} id="floatingInput" placeholder='' onChange={(e)=>setNome(e.target.value)}></input>
+              <input type='text' class={error} id="floatingInput" placeholder='Nome' onChange={(e)=>setNome(e.target.value)}></input>
               <label for="floatingInput"> Inserisci Nome </label>
             </div>
 
