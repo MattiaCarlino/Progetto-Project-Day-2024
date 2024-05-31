@@ -9,20 +9,26 @@ import 'bootstrap'
 
 const Chat_bot = () => {
 
+  //(localStorage.getItem('nome') != '' && localStorage.getItem('cognome') != '' && localStorage.getItem('istituto') != 'null' && localStorage.getItem('classe') != 'null' )
+
+  const[isLoged, setIsLoged] = useState(true)
+
   const selectPrompt = (id) =>{
     var prompt
 
-    if (localStorage.getItem('nome') != '' && localStorage.getItem('cognome') != '' && localStorage.getItem('istituto') != 'null' && localStorage.getItem('classe') != 'null' ){
+    if (false){
       if(id == 1){
         prompt = list_prompt[0].prompt
-        prompt.replace('istituto', 'nero')
       }else if(id == 2){
         prompt = list_prompt[1].prompt
       }else if(id ==3){
         prompt = list_prompt[2].prompt
       }
       sendMessage(prompt)
+    }else{
+      setIsLoged(false)
     }
+    
   }
 
   const firstChat = {
@@ -110,6 +116,7 @@ const Chat_bot = () => {
           </div>
           {
             currentChat.messageHistory.length === 1 ?
+            <div className='prompt-section'>
               <div className='prompt-options'>
                 <div className="suggestion" >
                   <h2> Organizzami lo studio </h2>
@@ -126,7 +133,19 @@ const Chat_bot = () => {
                   <p> Parte da un argomentoe collega diverse materie</p>
                   <button type="button" class="btn btn-outline-primary"onClick={() => {selectPrompt(3)}}> Chiedi </button>
                 </div>
+
               </div>
+              {
+                isLoged ?
+                null :
+                <div className='alert-login'>
+                  <div class="alert alert-danger" role="alert">
+                  A simple danger alert—check it out!
+                  </div>
+                </div> 
+              }
+            </div>
+              
             : null
           }
           <div className="bottom-bar">
