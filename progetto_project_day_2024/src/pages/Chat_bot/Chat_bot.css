@@ -41,12 +41,12 @@ input {
     border: none;
     outline: none;
     font-size: 20px;
-    color: white;
+    color: #eeeeee;
     width: 100%;
 }
 
 .start-button {
-    background-color: white;
+    background-color: #eeeeee;
     border-radius: 50%;
 }
 
@@ -80,7 +80,7 @@ input {
 
 h2 {
     font-family: sans-serif;
-    color: white;
+    color: #eeeeee;
     font-size: 18pt;
     font-weight: 500;
     margin-top: 5px;
@@ -89,7 +89,7 @@ h2 {
 p {
     font-family: sans-serif;
     font-size: 13pt;
-    color: white;
+    color: #eeeeee;
     width: 140vh;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -101,7 +101,7 @@ p {
     padding: 10px;
     display: flex;
     flex-direction: row;
-    color: white;
+    color: #eeeeee;
     font-size: 25px;
     height: 70%;
     position: relative;

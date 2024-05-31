@@ -1,8 +1,7 @@
 header#Header {
-    background-image: url("HeaderImage.jpg");
+    background-color: #222831;
     box-shadow: 0 15px 10px 0 #474747fa;  
     padding: 10px 20px;
-    color: rgb(17, 17, 80);
     border-bottom:solid;  border-top: solid;
 }
 
@@ -23,7 +22,7 @@ nav ul {
   }
 
 nav ul li a {
-    color: #ffffff !important;
+    color: #DFF6FF !important;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
@@ -56,7 +55,7 @@ nav ul li a {
     border-top: groove;
     border-right: solid;
     border-bottom: solid;
-    color: #ffffff;
+    color: #DFF6FF;
     
 
 

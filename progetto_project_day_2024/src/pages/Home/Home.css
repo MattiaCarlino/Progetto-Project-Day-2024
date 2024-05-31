@@ -9,21 +9,6 @@
 
   }
 
-  /*
-  Palette colori da fare:
-  #06283D - Sfondo
-  #1363DF - Pulsanti
-  #47B5FF - Da decidere
-  #DFF6FF - Scritte
-  */
- 
-  body{
-    background-image: url(IMMSFONDO2.png);
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   #bottone{
 
     display: flex;
@@ -39,7 +24,7 @@
     top: 40%;
     left: 25%;
     transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    color: #eeeeee;
     background-color: rgba(0,0,0,0.8);
     font-size: 5vh;
     font-weight: bold;
@@ -115,7 +100,7 @@
   justify-content: center;
   display: inline-block;
   text-align:start;
-  color: white;
+  color: #eeeeee;
   white-space: nowrap;
   text-decoration: none;
   line-height: 1.2;
@@ -143,7 +128,7 @@
   top: 15%;
   left: calc(75% + 10px); /* Posiziona il testo a destra dell'immagine */
   transform: translate(-50%, -50%);
-  color: white;
+  color: #DFF6FF;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -156,8 +141,8 @@
 
     font-size: 5.2vh;
     font-weight: bold;
-    color: #fff;
-    background-color: #3498db;
+    color: #DFF6FF;
+    background-color: #0092ca;
     padding: 10px 20px; /* Spaziatura interna */
     border-radius: 5px; /* Bordo arrotondato */
     text-align: center;
@@ -177,7 +162,7 @@
   text-align: center;
   left: calc(75% + 10px); /* Posiziona il testo a destra dell'immagine */
   transform: translate(-50%, -50%);
-  color: white;
+  color: #eeeeee;
   font-size: 2.4vh;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
