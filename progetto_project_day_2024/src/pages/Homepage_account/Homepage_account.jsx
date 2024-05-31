@@ -65,6 +65,13 @@ export const Homepage_account = () => {
   // si mette lo state Isverified a true e si renderizza un caricamento e il bottone per andare diretto al chat bot
     <div id='Homepage-account'>
       <div className='center-space'>
+        {isVerified ?
+        <div className='verify-section'>
+          <div>
+            
+          </div>
+        </div>
+        : 
         <form >
           <div className='title-field'><h5> Nome </h5></div>
             <div className='field' class="form-floating mb-3">
@@ -163,7 +170,8 @@ export const Homepage_account = () => {
                   <button type="button" class="btn btn-primary" onClick={validationInput}> Sign Up </button>
                 </div>
             </div>
-        </form>
+        </form>}
+        
       </div>
 
 
