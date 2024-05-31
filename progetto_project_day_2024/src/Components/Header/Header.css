@@ -1,8 +1,6 @@
 header#Header {
-    background-color: #222831;
-    box-shadow: 0 15px 10px 0 #474747fa;  
+    background-color: #36626a;
     padding: 10px 20px;
-    border-bottom:solid;  border-top: solid;
 }
 
 /*
@@ -22,7 +20,7 @@ nav ul {
   }
 
 nav ul li a {
-    color: #DFF6FF !important;
+    color: #f1d18a !important;
     text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
@@ -52,12 +50,11 @@ nav ul li a {
 #bordi{
 
     border-left: solid;
-    border-top: groove;
+    border-top: solid;
     border-right: solid;
     border-bottom: solid;
-    color: #DFF6FF;
-    
-
+    color: #f1d18a;
+    background-color: #588d9c;
 
 }
 #archimede:hover{
