@@ -13,7 +13,7 @@ export const Homepage_account = () => {
   const [nome, setNome] = useState('');
   const [cognome, setCognome] = useState('');
 
-  const [isVerified, setIsVierified] = useState(false)
+  const [isVerified, setIsVerified] = useState(false)
   const [errorInput, setErrorInput] = useState(false)
 
 
@@ -32,38 +32,42 @@ export const Homepage_account = () => {
 
     const regex = /^[A-Za-z]*$/;
 
-    /*
-
-    if(nome != '' || cognome != '' || istituto != 'null' || classe != 'null'){
-      if(regex.test(nome))
-
+    let verifyObject = {
+      verifyCognome: false,
+      verifyIstituto: false,
+      verifyNome: false,
+      verifyClasse: false
     }
-    */
-
-    if(nome == '' || nome == undefined){
-      setError("form-control is-invalid")
-    }else{
-      setError("form-control")
-    }
-    if(cognome == '' || cognome == undefined){
-      setErrorCognome("form-control is-invalid")
-    }else{
-      setCognome("form-control")
-    }
+    
     if(istituto == 'null'){
       setErrorIstituto("form-select is-invalid")
     }else{
       setErrorIstituto("form-select")
+      verifyObject.verifyIstituto = true
     }
     if(classe == 'null'){
       setErrorClasse("form-select is-invalid")  
     }else{
       setErrorClasse("form-select")
+      verifyObject.verifyClasse = true
     }
 
-    if(error != "form-control is-invalid" && errorCognome != "form-control is-invalid" && errorClasse != "form-select is-invalid" && errorIstituto != "form-select is-invalid"){
+    if(nome != '' && regex.test(nome)){
+      setError("form-control")
+      verifyObject.verifyNome = true
+    }else{
+      setError("form-control is-invalid")
+    }
+    if(cognome != '' && regex.test(cognome)){
+      setCognome("form-control")
+      verifyObject.verifyCognome = true
+    }else{
+      setErrorCognome("form-control is-invalid")
+    }
+    
+    if(verifyObject.verifyClasse == true && verifyObject.verifyCognome == true && verifyObject.verifyIstituto == true && verifyObject.verifyNome == true){
       saveData(istituto, classe)
-      setIsVierified(true)
+      setIsVerified(true)
     }else{
       setErrorInput(true)
     }
