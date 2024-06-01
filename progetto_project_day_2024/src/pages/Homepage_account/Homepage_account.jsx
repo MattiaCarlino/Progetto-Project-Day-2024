@@ -2,8 +2,9 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import '../Homepage_account/Homepage.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-export const Homepage_account = () => {
+export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TUTTO FATTA MEGLIO PER IL RESTO è COMPLETATA  
   
   const [error, setError] = useState("form-control")
   const [errorCognome, setErrorCognome] = useState("form-control")
@@ -16,12 +17,12 @@ export const Homepage_account = () => {
   const [isVerified, setIsVerified] = useState(false)
   const [errorInput, setErrorInput] = useState(false)
 
-
   const saveData = (istituto, classe) => {
     localStorage.setItem('nome', nome);
     localStorage.setItem('cognome', cognome);
     localStorage.setItem('istituto', istituto);
     localStorage.setItem('classe', classe);
+    localStorage.setItem('singUp', "true")
   }
 
   const validationInput = () => {
@@ -74,15 +75,26 @@ export const Homepage_account = () => {
   }
 
   return (
-
-
-  // COSA DA INSERIRE: da inserire il rendering condizionale del modulo Sing-up, quando si preme sul bottone Sing up se tutti i dati sono verificati giusti,
-  // si mette lo state Isverified a true e si renderizza un caricamento e il bottone per andare diretto al chat bot
     <div id='Homepage-account'>
       <div className='center-space'>
         {isVerified ?
+        // questa parte è ancora tutta da stilizzare sia il div con il messaggio di registrazione compleatata che quello per andare al chat bot
         <div className='verify-section'>
-          <div>
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Registrazione completata</h4>
+            <p>i dati che sono stati registrati sono:</p>
+            <ul>
+              <li>Nome: {localStorage.getItem('nome')}</li>
+              <li>Cogome: {localStorage.getItem('cognome')}</li>
+              <li>Istituto: {localStorage.getItem('istituto')}</li>
+              <li>Classe: {localStorage.getItem('classe')}</li>
+            </ul>
+          </div>
+          <div class="alert alert-primary" role="alert">
+            <p> Prova le funzionalità del chat bot</p>
+            <Link to="/Chat_bot">
+              <button type="button" class="btn btn-primary">Let's start</button>
+            </Link>
             
           </div>
         </div>
@@ -173,11 +185,11 @@ export const Homepage_account = () => {
               <h5>Classe</h5>
               <select class={errorClasse} id='classe'>
                 <option value= "null" selected>Seleziona la tua classe</option>
-                <option value="1">Prima</option>
-                <option value="2">Seconda</option>
-                <option value="3">Terza</option>
-                <option value="4">Quarta</option>
-                <option value="5">Quinta</option>
+                <option value="prima">Prima</option>
+                <option value="seconda">Seconda</option>
+                <option value="terza">Terza</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
               </select>
             </div>
               <div className='save-button'>

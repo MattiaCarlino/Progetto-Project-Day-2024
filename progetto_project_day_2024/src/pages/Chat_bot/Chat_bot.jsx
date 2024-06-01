@@ -10,14 +10,12 @@ import { Link } from 'react-router-dom';
 
 const Chat_bot = () => {
 
-  //(localStorage.getItem('nome') != '' && localStorage.getItem('cognome') != '' && localStorage.getItem('istituto') != 'null' && localStorage.getItem('classe') != 'null' )
-
   const[isLoged, setIsLoged] = useState(true)
 
   const selectPrompt = (id) =>{
     var prompt
 
-    if (false){
+    if (localStorage.getItem('singUp') == "true"){
       if(id == 1){
         prompt = list_prompt[0].prompt
       }else if(id == 2){
@@ -25,6 +23,8 @@ const Chat_bot = () => {
       }else if(id ==3){
         prompt = list_prompt[2].prompt
       }
+
+      // inserire prima di mandare il messaggio al chat bot con la chiamata API le informazioni dell'utente nel prompt, anche se non ben capito ancora come farlo
       sendMessage(prompt)
     }else{
       setIsLoged(false)
