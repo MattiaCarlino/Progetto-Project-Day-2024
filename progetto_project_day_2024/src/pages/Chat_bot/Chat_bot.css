@@ -1,5 +1,4 @@
 .main-chat-bot {
-    padding-right: 20vh;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -55,22 +54,30 @@ PALETTE
 }
 
 input {
-    background-color: transparent;
+    background-color: #588d9c;
     border: none;
-    outline: none;
+    outline: 1px solid #f1d18a;
     font-size: 20px;
-    color: #eeeeee;
+    color: #f1d18a;
     width: 100%;
 }
 
+::placeholder {
+    color: #f1d18a;
+}
+
 .start-button {
-    background-color: #eeeeee;
+    width: 3vw;
+    height: 6vh;
+    background-color: #588d9c;
+    border: solid 3px #f1d18a;
     border-radius: 50%;
 }
 
 .arrow {
-    width: 25px;
-    height: 30px;
+    width: 1vw;
+    height: auto;
+    color: #f1d18a;
 }
 
 .start-button:hover {
@@ -81,7 +88,7 @@ input {
 .messages {
     top: 2vh;
     height: 70%;
-    width: 145vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -98,7 +105,7 @@ input {
 
 h2 {
     font-family: sans-serif;
-    color: #eeeeee;
+    color: #f1d18a;
     font-size: 18pt;
     font-weight: 500;
     margin-top: 5px;
@@ -107,7 +114,7 @@ h2 {
 p {
     font-family: sans-serif;
     font-size: 13pt;
-    color: #eeeeee;
+    color: #f1d18a;
     width: 140vh;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -115,11 +122,11 @@ p {
 
 .prompt-options {
     top: 10vh;
-    left: 4.7vw;
+    left: 0;
     padding: 10px;
     display: flex;
     flex-direction: row;
-    color: #eeeeee;
+    color: #f1d18a;
     font-size: 25px;
     height: 70%;
     position: relative;
@@ -132,9 +139,10 @@ p {
 .suggestion {
     display: flex;
     flex-direction: column;
-    border: 1px solid gray;
+    border: 3px solid #f1d18a;
+    background-color: #588d9c;
     padding: 10px;
-    width: 400px;
+    width: 24vw;
     border-radius: 10px;
 }
 
@@ -146,7 +154,7 @@ p {
 .suggestion p {
     font-size: 16px;
     font-weight: 400;
-    color: gray;
+    color: #f1d18a;
 }
 
 .alert-login{
@@ -157,4 +165,13 @@ p {
 .titolo-alert{
     color: darkgray;
 
+}
+
+#btn {
+    border: solid 1px #f1d18a;
+    color: #f1d18a;
+}
+
+#btn:hover {
+    background-color: #36626a;
 }
