@@ -7,6 +7,7 @@ import fetchResponse from '../../api/api';
 import list_prompt from '../../list_prompt.json'
 import 'bootstrap'
 import { Link } from 'react-router-dom';
+import formatMessage from './Format_response';
 
 const Chat_bot = () => {
 
@@ -32,20 +33,6 @@ const Chat_bot = () => {
       setIsLoged(false);
     }
     
-  }
-
-  const formatMessage = (msg) => {
-    let msgArray = msg.split("**");
-    let temp = "";
-
-    msgArray.forEach((words, index) => {
-      let segment = (index % 2 === 0) ? words : `<b>${words}</b>`;
-      temp += segment;
-      if(!segment.includes(':'))
-        temp += "<br />";
-    });
-
-    return temp.split("*").join("<br />");
   }
 
   const firstChat = {
