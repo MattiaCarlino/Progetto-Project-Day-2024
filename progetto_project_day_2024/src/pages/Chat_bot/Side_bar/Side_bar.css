@@ -34,21 +34,6 @@
     color: #cfa458;
 }
 
-.icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.user-icon {
-    font-size: 50px;
-    color: #f1d18a;
-}
-
-.user-icon:hover {
-    color: #cfa458;
-}
-
 .chat-list {
     height: 83%;
     overflow: auto;

@@ -15,7 +15,7 @@ const Chat_bot = () => {
   const selectPrompt = (id) =>{
     let prompt;
 
-    if (false){ // non funziona la verifica dell'accesso penso sempre con problemi al localStorage non ho ancora provato il Session alla fine
+    if (localStorage.getItem("singUp") === "true"){
       if(id == 1){
         prompt = list_prompt[0].prompt
       }else if(id == 2){
