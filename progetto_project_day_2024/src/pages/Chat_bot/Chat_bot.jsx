@@ -15,7 +15,7 @@ const Chat_bot = () => {
   const selectPrompt = (id) =>{
     let prompt;
 
-    if (localStorage.getItem('singUp') == "true"){ // non funziona la verifica dell'accesso penso sempre con problemi al localStorage non ho ancora provato il Session alla fine
+    if (false){ // non funziona la verifica dell'accesso penso sempre con problemi al localStorage non ho ancora provato il Session alla fine
       if(id == 1){
         prompt = list_prompt[0].prompt
       }else if(id == 2){
@@ -41,7 +41,7 @@ const Chat_bot = () => {
     msgArray.forEach((words, index) => {
       let segment = (index % 2 === 0) ? words : `<b>${words}</b>`;
       temp += segment;
-      if(segment.includes(':'))
+      if(!segment.includes(':'))
         temp += "<br />";
     });
 
@@ -156,10 +156,10 @@ const Chat_bot = () => {
                 isLoged ?
                 null :
                 <div className='alert-login'>
-                  <div class="alert alert-danger" role="alert">
-                    <h5 className='titolo-alert'> Alert, devi prima inserire i dati dell'account per usare le funzionalità</h5>
+                  <div class="alert alert-danger" role="alert" id='alert'>
+                    <h5 className='titolo-alert'> Devi prima inserire i dati dell'account per usare questa funzionalità</h5>
                     <Link to="/Homepage Account">
-                      <button type="button" class="btn btn-danger">Danger</button>
+                      <button type="button" class="btn btn-danger" id='btn'>Rimedia</button>
                     </Link>
                   </div>
                 </div> 

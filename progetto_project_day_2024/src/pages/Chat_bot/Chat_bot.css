@@ -153,7 +153,8 @@ p {
 
 .alert-login{
     padding-top: 100px;
-  align-content: center;
+    align-content: center;
+    margin-right: -80px;
 }
 
 .titolo-alert{
@@ -164,8 +165,17 @@ p {
 #btn {
     border: solid 1px #f1d18a;
     color: #f1d18a;
+    background-color: #588d9c;
 }
 
 #btn:hover {
     background-color: #36626a;
+}
+
+#alert {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #588d9c;
 }
