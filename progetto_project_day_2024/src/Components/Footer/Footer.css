@@ -5,6 +5,10 @@
     padding-bottom: 2.5rem;
 }
 
+.footer-logo {
+    padding-right: 80px;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

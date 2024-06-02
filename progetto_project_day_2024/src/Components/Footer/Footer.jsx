@@ -1,6 +1,7 @@
 import React from 'react'
 import "../Footer/Footer.css"
 import { Link } from 'react-router-dom';
+import Logo from '../Header/prova logo.png'
 
 
 export const Footer = () => {
@@ -9,13 +10,13 @@ export const Footer = () => {
     <div className="container">
         <div className="footer-content">
             <div className="footer-logo">
-                <img src="https://img.freepik.com/premium-photo/cyber-digital-world-android-robot-pointing-finger-computer-coding-ai-chatbot-background_629685-1221.jpg" alt="Logo"></img>
+                <img src={Logo} alt="Logo"></img>
             </div>
             <div className="footer-links">
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li> | </li>
-                    <li><Link to="/About_us">Contatti</Link></li>
+                    <li><Link to="/About_us">About</Link></li>
                 </ul>
             </div>
             
