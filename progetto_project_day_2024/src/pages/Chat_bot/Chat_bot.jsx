@@ -111,7 +111,7 @@ const Chat_bot = () => {
           <div className="messages">
             {
               currentChat.messageHistory.map((msg, index) => (
-                <div key={index} className='msg'>
+                <div key={index} className='msg' id={msg.role}>
                   <h2>{msg.role === "model" ? "School Bot" : "Utente"}</h2>
                   <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
                 </div>
