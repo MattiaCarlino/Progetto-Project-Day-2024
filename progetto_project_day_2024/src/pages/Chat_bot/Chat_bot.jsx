@@ -13,7 +13,7 @@ const Chat_bot = () => {
   const[isLoged, setIsLoged] = useState(true)
 
   const selectPrompt = (id) =>{
-    var prompt
+    let prompt;
 
     if (localStorage.getItem('singUp') == "true"){ // non funziona la verifica dell'accesso penso sempre con problemi al localStorage non ho ancora provato il Session alla fine
       if(id == 1){
@@ -24,17 +24,12 @@ const Chat_bot = () => {
         prompt = list_prompt[2].prompt
       }
 
-      // questa è la parte in cui preso il prompt deve sostitutire gli elementi predefiniti con quelli inseriti dall'utente
-      /*
-      console.log(prompt)
-      promptModified = prompt.replace("<classe inserita>", localStorage.getItem('classe')) // penso che non trovi il valore nel localStorage e quindi non setti nulla
-      promptModified = prompt.replace("<scuola inserita>",localStorage.getItem('istituto'))
-      console.log(promptModified) // solo per visualizzare da terminale
-      */
-      //fine parte che non funziona
-      sendMessage(prompt)
+      let promptModified = prompt.replace("<classe>", localStorage.getItem('classe'));
+      promptModified = promptModified.replace("<scuola>",localStorage.getItem('istituto'));
+
+      sendMessage(prompt);
     }else{
-      setIsLoged(false)
+      setIsLoged(false);
     }
     
   }
@@ -130,7 +125,7 @@ const Chat_bot = () => {
             {
               currentChat.messageHistory.map((msg, index) => (
                 <div key={index} className='msg'>
-                  <h2>{msg.role === "model" ? "ChatBot" : "Utente"}</h2>
+                  <h2>{msg.role === "model" ? "School Bot" : "Utente"}</h2>
                   <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
                 </div>
               ))

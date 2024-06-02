@@ -13,7 +13,7 @@ export const Header = () => {
             <li><img src={Logo} alt="logo-app" className='logo-app' /></li>
             <li><Link to="/"><h5>Home</h5></Link></li>
             <li><Link to="/About_us"><h5>About</h5></Link></li>
-            <li><Link to= "/Homepage Account"><h5 className='sing-up-title'>Sing up </h5><MdAccountCircle /> </Link></li>
+            <li><Link to= "/Homepage Account"><h5 className='sign-up-title'>Sign up </h5><MdAccountCircle /> </Link></li>
           </ul>
         </nav>
       </div>

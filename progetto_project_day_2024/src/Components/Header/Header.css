@@ -1,6 +1,6 @@
 header#Header {
     background-color: #36626a;
-    padding: 10px 20px;
+    padding: 25px 20px 10px 20px;
 }
 
 ul {
@@ -53,6 +53,6 @@ a {
     align-items: center;
 }
 
-.sing-up-title{
+.sign-up-title{
     padding-right: 15px;
 }
