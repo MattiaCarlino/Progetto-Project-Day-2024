@@ -80,20 +80,19 @@ export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TU
         {isVerified ?
         // questa parte è ancora tutta da stilizzare sia il div con il messaggio di registrazione compleatata che quello per andare al chat bot
         <div className='verify-section'>
-          <div class="alert alert-success" role="alert">
+          <div class="alert alert-success" role="alert" id="alert1">
             <h4 class="alert-heading">Registrazione completata</h4>
-            <p>i dati che sono stati registrati sono:</p>
-            <ul>
-              <li>Nome: {localStorage.getItem('nome')}</li>
-              <li>Cogome: {localStorage.getItem('cognome')}</li>
-              <li>Istituto: {localStorage.getItem('istituto')}</li>
-              <li>Classe: {localStorage.getItem('classe')}</li>
+            <ul className='list'>
+              <li className='prop'>Nome: {localStorage.getItem('nome')}</li>
+              <li className='prop'>Cogome: {localStorage.getItem('cognome')}</li>
+              <li className='prop'>Istituto: {localStorage.getItem('istituto')}</li>
+              <li className='prop'>Classe: {localStorage.getItem('classe')}</li>
             </ul>
           </div>
-          <div class="alert alert-primary" role="alert">
+          <div class="alert alert-primary" role="alert" id="alert2">
             <p> Prova le funzionalità del chat bot</p>
             <Link to="/Chat_bot">
-              <button type="button" class="btn btn-primary">Let's start</button>
+              <button type="button" class="btn btn-primary">Prova!</button>
             </Link>
           </div>
         </div>
