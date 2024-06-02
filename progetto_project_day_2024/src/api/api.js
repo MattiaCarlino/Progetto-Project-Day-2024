@@ -4,7 +4,6 @@ const API_KEY = "AIzaSyCGPW64MYc8P2bzp7_G7WtiE-bdmYjxCsM";
 
 const AI = new GoogleGenerativeAI(API_KEY);
 
-// non l'ho ancora testata e devo ancora sistemare alcune cose :(
 // COME FUNZIONA E ACCORTEZZE NELLA CHIAMATA:
 // alla funzione va passato un array contenente l'intera cronologia dei messaggi
 // incluso l'ultimo messaggio(quello di cui si vuole una risposta). l'array va
@@ -28,9 +27,27 @@ const fetchResponse = async (messageHistory, messageSent) => {
     const model = AI.getGenerativeModel({ model: "gemini-1.5-pro"});
 
     const chat = model.startChat({
+      temperature: 0.5,
       history: messageHistory,
-      generationConfig: {maxOutputTokens: 2000},
-      safetySettings: [] // TO DO: imposta limiti nei prompt(volgarità tipo palle)
+      generationConfig: {maxOutputTokens: 4000},
+      safetySettings: [
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+        }
+      ]
     });
 
     const result = await chat.sendMessage(messageSent);

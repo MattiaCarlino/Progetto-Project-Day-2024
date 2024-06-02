@@ -32,6 +32,20 @@ const Chat_bot = () => {
     
   }
 
+  const formatMessage = (msg) => {
+    let msgArray = msg.split("**");
+    let temp = "";
+
+    msgArray.forEach((words, index) => {
+      let segment = (index % 2 === 0) ? words : `<b>${words}</b>`;
+      temp += segment;
+      if(segment.includes(':'))
+        temp += "<br />";
+    });
+
+    return temp.split("*").join("<br />");
+  }
+
   const firstChat = {
     id: 1,
     title: "Chat n. 1",
@@ -66,7 +80,7 @@ const Chat_bot = () => {
         ...prevChat.messageHistory,
         {
           role: "model",
-          parts: [{ text: answer }]
+          parts: [{ text: formatMessage(answer) }]
         }
       ]
     }));
@@ -109,8 +123,8 @@ const Chat_bot = () => {
             {
               currentChat.messageHistory.map((msg, index) => (
                 <div key={index} className='msg'>
-                  <h2>{msg.role}</h2>
-                    <p>{msg.parts[0].text}</p>
+                  <h2>{msg.role === "model" ? "ChatBot" : "Utente"}</h2>
+                  <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
                 </div>
               ))
             }
@@ -121,17 +135,17 @@ const Chat_bot = () => {
               <div className='prompt-options'>
                 <div className="suggestion" >
                   <h2> Organizzami lo studio </h2>
-                  <p>Organizza un piano di studi in base alle tue materie</p>
+                  <p id='sugg'>Organizza un piano di studi in base alle tue materie</p>
                   <button type="button" id="btn" class="btn btn-outline-primary"onClick={() => {selectPrompt(1)}}> Chiedi </button>
                 </div>
                 <div className="suggestion">
                   <h2> Opzioni orientamento </h2>
-                  <p>Propone una serie di opzioni d'orientamento in uscita</p>
+                  <p id='sugg'>Propone una serie di opzioni d'orientamento in uscita</p>
                   <button type="button" id="btn" class="btn btn-outline-primary"onClick={() => {selectPrompt(2)}}> Chiedi </button>
                 </div>
                 <div className="suggestion">
                   <h2> Collegamenti argomento </h2>
-                  <p> Parte da un argomentoe collega diverse materie</p>
+                  <p id='sugg'> Parte da un argomento e collega diverse materie</p>
                   <button type="button" id="btn" class="btn btn-outline-primary"onClick={() => {selectPrompt(3)}}> Chiedi </button>
                 </div>
 
