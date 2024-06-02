@@ -27,7 +27,7 @@ const Chat_bot = () => {
       let promptModified = prompt.replace("<classe>", localStorage.getItem('classe'));
       promptModified = promptModified.replace("<scuola>",localStorage.getItem('istituto'));
 
-      sendMessage(prompt);
+      sendMessage(promptModified);
     }else{
       setIsLoged(false);
     }
