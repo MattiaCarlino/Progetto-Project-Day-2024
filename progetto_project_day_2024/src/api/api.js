@@ -27,7 +27,7 @@ const fetchResponse = async (messageHistory, messageSent) => {
     const model = AI.getGenerativeModel({ model: "gemini-1.5-pro"});
 
     const chat = model.startChat({
-      temperature: 0.5,
+      temperature: 0.7,
       history: messageHistory,
       generationConfig: {maxOutputTokens: 4000},
       safetySettings: [
