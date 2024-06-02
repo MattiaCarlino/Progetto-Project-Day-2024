@@ -31,12 +31,6 @@ const Side_bar = ({chatList, setChatList, currentChat, setCurrentChat}) => {
 
   return (
     <div className="side-bar">
-
-        <div className='icon-container'>
-            <Link to='../Homepage Account'>
-                <MdAccountCircle className='user-icon' />
-            </Link>
-        </div>
         
         <div className="new-chat">
             <button className='chat-button' onClick={newChat}> Nuova chat </button>

@@ -15,7 +15,7 @@ const Chat_bot = () => {
   const selectPrompt = (id) =>{
     var prompt
 
-    if (localStorage.getItem('singUp') == "true"){
+    if (localStorage.getItem('singUp') == "true"){ // non funziona la verifica dell'accesso penso sempre con problemi al localStorage non ho ancora provato il Session alla fine
       if(id == 1){
         prompt = list_prompt[0].prompt
       }else if(id == 2){
@@ -24,7 +24,14 @@ const Chat_bot = () => {
         prompt = list_prompt[2].prompt
       }
 
-      // inserire prima di mandare il messaggio al chat bot con la chiamata API le informazioni dell'utente nel prompt, anche se non ben capito ancora come farlo
+      // questa è la parte in cui preso il prompt deve sostitutire gli elementi predefiniti con quelli inseriti dall'utente
+      /*
+      console.log(prompt)
+      promptModified = prompt.replace("<classe inserita>", localStorage.getItem('classe')) // penso che non trovi il valore nel localStorage e quindi non setti nulla
+      promptModified = prompt.replace("<scuola inserita>",localStorage.getItem('istituto'))
+      console.log(promptModified) // solo per visualizzare da terminale
+      */
+      //fine parte che non funziona
       sendMessage(prompt)
     }else{
       setIsLoged(false)
@@ -52,7 +59,7 @@ const Chat_bot = () => {
     messageHistory: [
       {
         role: "model",
-        parts: [{text: "Ciao! Sono School ChatBot. Come posso aiutarti?"}]
+        parts: [{text: "Ciao! Sono School Bot. Come posso aiutarti?"}]
       }
     ] 
   }

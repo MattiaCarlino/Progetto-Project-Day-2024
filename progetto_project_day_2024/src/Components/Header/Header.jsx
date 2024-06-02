@@ -11,9 +11,9 @@ export const Header = () => {
         <nav className='nav-bar'>
           <ul>
             <li><img src={Logo} alt="logo-app" className='logo-app' /></li>
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/About_us">ABOUT US</Link></li>
-            <li id='bordi'><Link to= "/Homepage Account"> SIGN UP <MdAccountCircle /> </Link></li>
+            <li><Link to="/"><h5>Home</h5></Link></li>
+            <li><Link to="/About_us"><h5>About</h5></Link></li>
+            <li><Link to= "/Homepage Account"><h5 className='sing-up-title'>Sing up </h5><MdAccountCircle /> </Link></li>
           </ul>
         </nav>
       </div>
