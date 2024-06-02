@@ -6,20 +6,10 @@
 
 /*
 PALETTE
-.first-color { 
-	background: #36626a; 
-}
-	
-.second-color { 
-	background: #588d9c; 
-}
-
-.third-color { 
-	background: #73b1c1; 
-}
-
-.fourth-color { 
-	background: #f1d18a; 
+#36626a; Scuro 
+#588d9c; Mezzo
+#73b1c1; Chiaro
+#f1d18a; Giallino
 */
 
 .chat-bot-stream {
@@ -36,7 +26,7 @@ PALETTE
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
     z-index: 10;
@@ -45,7 +35,7 @@ PALETTE
 }
 
 .text-field {
-    border: 1px solid gray;
+    border: 1px solid #f1d18a;
     align-items: center;
     display: flex;
     padding: 15px;
@@ -59,7 +49,7 @@ input {
     outline: 1px solid #f1d18a;
     font-size: 20px;
     color: #f1d18a;
-    width: 100%;
+    width: 90%;
 }
 
 ::placeholder {
@@ -67,34 +57,33 @@ input {
 }
 
 .start-button {
-    width: 3vw;
-    height: 6vh;
+    width: 3rem;
+    height: 3rem;
     background-color: #588d9c;
     border: solid 3px #f1d18a;
     border-radius: 50%;
 }
 
-.arrow {
-    width: 1vw;
-    height: auto;
-    color: #f1d18a;
-}
-
 .start-button:hover {
     cursor: pointer;
-    background-color: grey;
+    background-color: #26525a;
+}
+
+.arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #f1d18a;
 }
 
 .messages {
     top: 2vh;
-    height: 70%;
     width: 100vw;
     display: flex;
     flex-direction: column;
     gap: 25px;
     overflow: auto;
     position: absolute;
-    bottom: 15vh;
+    bottom: 16vh;
 }
 
 .msg div {
@@ -106,18 +95,22 @@ input {
 h2 {
     font-family: sans-serif;
     color: #f1d18a;
-    font-size: 18pt;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-top: 5px;
 }
 
 p {
     font-family: sans-serif;
-    font-size: 13pt;
+    font-size: 1rem;
     color: #f1d18a;
-    width: 140vh;
+    width: 70vw;
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+#sugg {
+    width: 22.2vw;
 }
 
 .prompt-options {
@@ -143,6 +136,7 @@ p {
     background-color: #588d9c;
     padding: 10px;
     width: 24vw;
+    height: 100%;
     border-radius: 10px;
 }
 
