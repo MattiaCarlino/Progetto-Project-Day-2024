@@ -25,7 +25,7 @@ const fetchResponse = async (messageHistory, messageSent) => {
   
   try {
 
-    const model = AI.getGenerativeModel({ model: "gemini-1.0-pro"});
+    const model = AI.getGenerativeModel({ model: "gemini-1.5-pro"});
 
     const chat = model.startChat({
       history: messageHistory,

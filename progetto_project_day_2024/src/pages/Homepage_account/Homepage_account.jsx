@@ -60,7 +60,7 @@ export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TU
       setError("form-control is-invalid")
     }
     if(cognome != '' && regex.test(cognome)){
-      setCognome("form-control")
+      setErrorCognome("form-control")
       verifyObject.verifyCognome = true
     }else{
       setErrorCognome("form-control is-invalid")
@@ -95,7 +95,6 @@ export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TU
             <Link to="/Chat_bot">
               <button type="button" class="btn btn-primary">Let's start</button>
             </Link>
-            
           </div>
         </div>
         : 
