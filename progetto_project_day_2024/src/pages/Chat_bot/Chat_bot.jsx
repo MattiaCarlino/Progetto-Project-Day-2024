@@ -39,7 +39,7 @@ const Chat_bot = () => {
     msgArray.forEach((words, index) => {
       let segment = (index % 2 === 0) ? words : `<b>${words}</b>`;
       temp += segment;
-      if(!segment.includes(':'))
+      if(segment.includes(':'))
         temp += "<br />";
     });
 
