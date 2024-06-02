@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { MdAccountCircle } from 'react-icons/md';
 import './Side_bar.css';
 
 const Side_bar = ({chatList, setChatList, currentChat, setCurrentChat}) => {
