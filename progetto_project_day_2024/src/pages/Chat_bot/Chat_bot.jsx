@@ -59,6 +59,16 @@ const Chat_bot = () => {
   }, [currentChat]);
 
   const apiCall = async (messageSent) => {
+    setCurrentChat(prevChat => ({
+      ...prevChat,
+      messageHistory: [
+        ...prevChat.messageHistory,
+        {
+          role: "model",
+          parts: [{ text: "Sto elaborando la richiesta..." }]
+        }
+      ]
+    }));
     let historyToSend = [];
     if(currentChat.messageHistory.length > 2) {
       historyToSend = currentChat.messageHistory.slice(1, -1);
@@ -67,7 +77,7 @@ const Chat_bot = () => {
     setCurrentChat(prevChat => ({
       ...prevChat,
       messageHistory: [
-        ...prevChat.messageHistory,
+        ...prevChat.messageHistory.slice(0, prevChat.messageHistory.length-1),
         {
           role: "model",
           parts: [{ text: formatMessage(answer) }]
