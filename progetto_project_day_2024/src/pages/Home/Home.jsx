@@ -22,7 +22,7 @@ export const Home = () => {
               ></img>
                 <div id='descrizione'>
 
-                  <text id='titolo'> School ChatBOT ! </text>
+                  <text id='titolo'> School Bot </text>
 
                   </div>
                   

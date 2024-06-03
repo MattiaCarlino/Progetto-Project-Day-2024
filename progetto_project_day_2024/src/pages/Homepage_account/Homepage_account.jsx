@@ -4,7 +4,7 @@ import '../Homepage_account/Homepage.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TUTTO FATTA MEGLIO PER IL RESTO è COMPLETATA  
+export const Homepage_account = () => {
   
   const [error, setError] = useState("form-control")
   const [errorCognome, setErrorCognome] = useState("form-control")
@@ -78,7 +78,6 @@ export const Homepage_account = () => { // MANCA SOLO STILIZZAZIONE FINALE DI TU
     <div id='Homepage-account'>
       <div className='center-space'>
         {isVerified ?
-        // questa parte è ancora tutta da stilizzare sia il div con il messaggio di registrazione compleatata che quello per andare al chat bot
         <div className='verify-section'>
           <div class="alert alert-success" role="alert" id="alert1">
             <h4 class="alert-heading">Registrazione completata</h4>
