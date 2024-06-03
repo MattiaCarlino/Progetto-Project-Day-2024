@@ -27,7 +27,7 @@ const Chat_bot = () => {
 
       let promptModified = prompt.replace("<classe>", localStorage.getItem('classe'));
       promptModified = promptModified.replace("<scuola>",localStorage.getItem('istituto'));
-
+      setPrompt({val: "prompt " + id});
       sendMessage(promptModified);
     }else{
       setIsLoged(false);
@@ -49,6 +49,7 @@ const Chat_bot = () => {
   const [currentChat, setCurrentChat] = useState(firstChat);
   const [chatList, setChatList] = useState([currentChat]);
   const [message, setMessage] = useState("");
+  const [prompt, setPrompt] = useState({val: "no"});
 
   useEffect(() => {
     setChatList(prevChatList => {
@@ -113,7 +114,10 @@ const Chat_bot = () => {
               currentChat.messageHistory.map((msg, index) => (
                 <div key={index} className='msg' id={msg.role}>
                   <h2>{msg.role === "model" ? "School Bot" : "Utente"}</h2>
-                  <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
+                  { index !==1 || prompt.val === "no" ?
+                    <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
+                    : <p> {prompt.val} </p>
+                  }
                 </div>
               ))
             }
