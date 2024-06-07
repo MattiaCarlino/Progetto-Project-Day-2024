@@ -7,6 +7,7 @@ import fetchResponse from '../../api/api';
 import list_prompt from '../../list_prompt.json'
 import 'bootstrap'
 import { Link } from 'react-router-dom';
+import formatMessage from './Format_response';
 
 const Chat_bot = () => {
 
@@ -26,26 +27,12 @@ const Chat_bot = () => {
 
       let promptModified = prompt.replace("<classe>", localStorage.getItem('classe'));
       promptModified = promptModified.replace("<scuola>",localStorage.getItem('istituto'));
-
+      setPrompt({val: "prompt " + id});
       sendMessage(promptModified);
     }else{
       setIsLoged(false);
     }
     
-  }
-
-  const formatMessage = (msg) => {
-    let msgArray = msg.split("**");
-    let temp = "";
-
-    msgArray.forEach((words, index) => {
-      let segment = (index % 2 === 0) ? words : `<b>${words}</b>`;
-      temp += segment;
-      if(!segment.includes(':'))
-        temp += "<br />";
-    });
-
-    return temp.split("*").join("<br />");
   }
 
   const firstChat = {
@@ -62,6 +49,7 @@ const Chat_bot = () => {
   const [currentChat, setCurrentChat] = useState(firstChat);
   const [chatList, setChatList] = useState([currentChat]);
   const [message, setMessage] = useState("");
+  const [prompt, setPrompt] = useState({val: "no"});
 
   useEffect(() => {
     setChatList(prevChatList => {
@@ -71,6 +59,16 @@ const Chat_bot = () => {
   }, [currentChat]);
 
   const apiCall = async (messageSent) => {
+    setCurrentChat(prevChat => ({
+      ...prevChat,
+      messageHistory: [
+        ...prevChat.messageHistory,
+        {
+          role: "model",
+          parts: [{ text: "Sto elaborando la richiesta..." }]
+        }
+      ]
+    }));
     let historyToSend = [];
     if(currentChat.messageHistory.length > 2) {
       historyToSend = currentChat.messageHistory.slice(1, -1);
@@ -79,7 +77,7 @@ const Chat_bot = () => {
     setCurrentChat(prevChat => ({
       ...prevChat,
       messageHistory: [
-        ...prevChat.messageHistory,
+        ...prevChat.messageHistory.slice(0, prevChat.messageHistory.length-1),
         {
           role: "model",
           parts: [{ text: formatMessage(answer) }]
@@ -124,9 +122,12 @@ const Chat_bot = () => {
           <div className="messages">
             {
               currentChat.messageHistory.map((msg, index) => (
-                <div key={index} className='msg'>
+                <div key={index} className='msg' id={msg.role}>
                   <h2>{msg.role === "model" ? "School Bot" : "Utente"}</h2>
-                  <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
+                  { index !==1 || prompt.val === "no" ?
+                    <p dangerouslySetInnerHTML={{ __html: formatMessage(msg.parts[0].text) }} />
+                    : <p> {prompt.val} </p>
+                  }
                 </div>
               ))
             }
