@@ -24,7 +24,7 @@ export const Footer = () => {
         <div className="footer-info">
             <p>© 2024 ITIS Archimede</p>
             <p>Indirizzo: Via Greggia, 52, 24047 Treviglio BG</p>
-            <p>Email: ferri.davide.stu@isarchimede.it | barboni.luca.stu@isarchimede.it |   carlino.mattia.stu@isarchimede.it
+            <p className='email'>Email: <a href="mailto:ferri.davide.stu@isarchimede.it" > ferri.davide.stu@isarchimede.it </a> <a href="mailto:barboni.luca.stu@isarchimede.it" > barboni.luca.stu@isarchimede.it </a> <a href="mailto:carlino.mattia.stu@isarchimede.it" > carlino.mattia.stu@isarchimede.it </a> 
             </p>
         </div>
     </div>

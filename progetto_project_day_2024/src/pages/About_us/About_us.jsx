@@ -41,10 +41,10 @@ export const About_us = () => {
           </div>
           <div id= 'outer-box'>
             <div className='box-tecnology-repo' id='box'>
-              <h5>Tecnlogie e Repository</h5>
+              <h5>Tecnologie e Repository</h5>
               <p>
                 School Bot attualmente è solo un progetto front-end, con funzionalità ancora limitate e costruito completamente
-                lato Front-end, le tecnlogie che abbiamo utilizzato per svilupparlo sono la libreria Javascript Reacte le API fornite da
+                lato Front-end, le tecnlogie che abbiamo utilizzato per svilupparlo sono la libreria Javascript React e le API fornite da
                 Google per interfacciarci con il suo modello di linguaggio Gemini 1.5 pro, l'intero progetto e tutto il versioning del codice
                 è disponibile su Github, sul Repository<a href="https://github.com/MattiaCarlino/Progetto-Project-Day-2024" target='_blank'> Project Day 2024</a>
               </p>
