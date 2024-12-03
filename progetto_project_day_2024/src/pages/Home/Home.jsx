@@ -1,7 +1,9 @@
 import React from 'react'
 import '../Home/Home.css'
 import { Link } from 'react-router-dom';
-import 'animate.css'
+import 'animate.css';
+import Typewriter from './typewriter';
+
 
 export const Home = () => {
   return (
@@ -16,6 +18,7 @@ export const Home = () => {
             
             
             </div>
+            
 
             <div id='image'>
               <img src='https://www.teknoring.com/wp-content/uploads/2019/03/intelligenza-artificiale.jpg'
@@ -28,14 +31,9 @@ export const Home = () => {
                   
                     <text id='spiegazione'>
 
-                      <br></br>
-                      School ChatBOT risponde a qualsiasi tuo dubbio, domanda e perplessità. <br></br>
-                      Può organizzare il tuo studio, collegare 2 o più materie in base all'argomento, <br></br>
-                      insomma, aiutarti fornendoti ciò di cui hai bisogno. <br></br>
-                      <br></br>
-                      Premi il tasto e guarda con i tuoi occhi <br></br>
+                      <Typewriter delay={5500}/>  
 
-                  </text>
+                    </text>
 
                   
                 

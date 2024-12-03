@@ -21,6 +21,7 @@ div#Homepage-account {
     width: 700px;
     padding: 30px;
     border: 3px solid #f1d18a;
+    background-color: rgb(102, 102, 102);
 }
 
 .field{

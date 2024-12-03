@@ -102,7 +102,6 @@
   text-align:start;
   color: #f1d18a;
   white-space: nowrap;
-  text-decoration: none;
   line-height: 1.2;
   font-weight: normal;
   font-family: sans-serif;
@@ -115,9 +114,9 @@
 
  }
  #bottone:hover {
-  background-color:  #36626a;
-  border-color: #cfa458;
-  color: #cfa458;
+  background-color:  #487683;
+  border-color: #fad585 ;
+  color: #fcd279;
  }
  #bottone > strong {
   font-size: 24px;
@@ -157,19 +156,22 @@
  #spiegazione{
 
   position: absolute;
-  top: 35%;
+  top: 42%;
   left: calc(75% + 10px); /* Posiziona il testo a destra dell'immagine */
   transform: translate(-50%, -50%);
   justify-content: center;
   text-align: center;
   left: calc(75% + 10px); /* Posiziona il testo a destra dell'immagine */
   transform: translate(-50%, -50%);
-  color: #f1d18a;
-  font-size: 2.4vh;
-  font-weight: bold;
+  color: #f8f0f0;
+  font-size: 2.8vh;
+  font-weight:bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-top: 20px;
   padding-bottom: 10px;
+  background-color: #65abf6;
+  border-radius: 10%;
+  
 
 
  }
